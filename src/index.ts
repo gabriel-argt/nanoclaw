@@ -4,6 +4,7 @@ import path from 'path';
 import {
   ASSISTANT_NAME,
   CREDENTIAL_PROXY_PORT,
+  HISTORY_LIMIT,
   IDLE_TIMEOUT,
   POLL_INTERVAL,
   TIMEZONE,
@@ -164,6 +165,7 @@ async function processGroupMessages(chatJid: string): Promise<boolean> {
     chatJid,
     sinceTimestamp,
     ASSISTANT_NAME,
+    HISTORY_LIMIT,
   );
 
   if (missedMessages.length === 0) return true;
